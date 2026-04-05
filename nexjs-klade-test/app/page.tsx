@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import openai from "openai";
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
