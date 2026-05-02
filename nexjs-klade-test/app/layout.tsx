@@ -26,8 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/flowers.jpg')" }}/>
-        <div className="absolute inset-0 bg-black/10 backdrop-blur-sm" />
+        <div className="absolute -z-10 inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/flowers.jpg')" }}/>
+        <div className="absolute -z-10 inset-0 bg-black/10 backdrop-blur-sm" />
         <Navbar />
         {children}
       </body>
