@@ -1,11 +1,25 @@
 import Link from "next/link";
+import Image from "next/image";
+import {Home, Shirt, User} from "lucide-react";
+import NavbarItem from "./navbarItems";
+
+const items = [
+  {title: "Home", href: "/", icon: Home},
+  {title: "Men", href: "/men", icon: Shirt},
+  {title: "Women", href: "/women", icon: User},
+]
 
 const Navbar = () => {
   return (
-    <div className="absolute top-0 left-0 w-full z-50 flex flex-row justify-evenly items-center bg-white/20 p-5 *:p-2">
-      <Link className="border-2 rounded-2xl border-orange-600 hover:scale-110" href="/men">men</Link>
-      <Link className="border-2 rounded-2xl border-orange-600 hover:scale-110" href="/">Home</Link>
-      <Link className="border-2 rounded-2xl border-orange-600 hover:scale-110" href="/women">Women</Link>
+    <div className="flex flex-row mx-auto sticky top-5 space-x-4 p-2 bg-black/10 rounded-full">
+      {items.map((item) => (
+        <Link key={item.title} href={item.href} className="text-white font-medium text-lg">
+          <NavbarItem Icon={item.icon} title={item.title} />
+        </Link>
+      ))}
+      <div className="relative shrink-0 w-10 h-10 aspect-square rounded-full">
+        <Image src="/User.jpg" alt="Logo" fill sizes="(orientation: portrait) 50px, 60px" className="object-cover rounded-full" />
+      </div>
     </div>
   )
 }
