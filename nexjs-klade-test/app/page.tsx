@@ -7,7 +7,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold text-white mt-20">Port Lovell</h1>
       <div>
         <h2>Elijah A Davis</h2>
-        <p>I need a fresh push</p>
+        <p>New fresh push</p>
       </div>
     </div>
   );
